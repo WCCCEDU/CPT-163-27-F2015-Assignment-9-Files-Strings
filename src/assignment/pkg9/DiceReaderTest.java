@@ -40,8 +40,7 @@ public class DiceReaderTest {
         String dieType = dieConfig[1];
         
         int loadedSide = 0;
-        if (dieType.equals("loaded"));
-        {
+        if (dieType.equals("loaded")){
           loadedSide = Integer.parseInt(dieConfig[2]);
         }
 
