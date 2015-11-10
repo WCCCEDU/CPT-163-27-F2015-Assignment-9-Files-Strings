@@ -31,9 +31,9 @@ public class DnDDiceRoller {
         File temp = new File ("dice.txt");
         Scanner file = new Scanner (temp);
         
-       while(file.hasNext()){
+      while(file.hasNext()){
            String s = file.nextLine().trim();
-           System.out.println(s);
+          System.out.println(s);
        }
 
 
