@@ -16,7 +16,7 @@ public class DnDDiceRoller {
    * Try out your dies and dice tower
    * @param args the command line arguments
    */
-  public static void main(String[] args) {
+  public static void main(String[] args) throws FileNotFoundException {
 	for(int i = 0; i< 1000; i++){
 	  int d6 = test_oneD6();
 	  if(d6 != -1){
@@ -24,10 +24,21 @@ public class DnDDiceRoller {
 	  }
 	  int tower = test_diceTowerWithTwoD6();
 	  if(tower != -1){
-		System.out.println("Tower Test Failed with Value: " + tower);
+	System.out.println("Tower Test Failed with Value: " + tower);
 	  }
-          DiceFileReader diceReader = diceReader = new diceScore(dice.txt);
+          //DiceFileReader diceReader = diceReader = new diceScore(dice.txt);
 	}
+        File temp = new File ("dice.txt");
+        Scanner file = new Scanner (temp);
+        
+       while(file.hasNext()){
+           String s = file.nextLine().trim();
+           System.out.println(s);
+       }
+
+
+        
+        
   }
   
   public static int test_oneD6(){
