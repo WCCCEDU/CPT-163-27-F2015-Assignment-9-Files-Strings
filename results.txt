@@ -1,0 +1,9 @@
+run:
+Begin Test
+New Tray: 20:loaded:6 10:numbered 6:fudge 10:fudge 20:fudge    trayValue is 115
+New Tray: 4:loaded:1 10:numbered 6:fudge 100:numbered 5:numbered    trayValue is 402
+New Tray: 8:fudge 8:numbered 8:loaded:4    trayValue is 51
+New Tray: 10:numbered 10:numbered 10:numbered 10:numbered    trayValue is 143
+New Tray: 6:fudge 6:loaded:2 6:loaded:4 6:loaded:6    trayValue is 57
+End Test
+BUILD SUCCESSFUL (total time: 0 seconds)
