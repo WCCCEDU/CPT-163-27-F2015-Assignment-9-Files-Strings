@@ -46,5 +46,10 @@ public class DiceFileReader {
   public void read(){
 	this.lines = new ArrayList();
 	// Put you read logic and populate lines
+        for(int i=0; i<1; i++){
+            this.input.nextLine();
+            this.lines.add(this.input.nextLine());
+        }
+        close();
   }
 }
