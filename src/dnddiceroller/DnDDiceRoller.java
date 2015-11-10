@@ -26,7 +26,7 @@ public class DnDDiceRoller {
 	  if(tower != -1){
 	System.out.println("Tower Test Failed with Value: " + tower);
 	  }
-          //DiceFileReader diceReader = diceReader = new diceScore(dice.txt);
+          DiceFileReader diceReader = diceReader = new DiceFileReader("./dice.txt");
 	}
         File temp = new File ("dice.txt");
         Scanner file = new Scanner (temp);
