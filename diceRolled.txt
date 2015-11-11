@@ -1,0 +1,8 @@
+### This file displays the outcome of die after rolling.
+###The value after the semicolon is the new rolled amount.	 
+	 
+loaded:20;11	numbered:10;6	fudge:6;1	fudge:10;1	fudge:20;1	 
+loaded:4;4	numbered:10;10	fudge:6;-1	numbered:100;97	numbered:5;2	 
+fudge:8;0	numbered:8;6	loaded:8;8	 
+numbered:10;4	numbered:10;7	numbered:10;2	numbered:10;7	 
+fudge:6;-1	loaded:6;5	loaded:6;4	loaded:6;4	 
