@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package assignment.pkg9;
 
 import java.io.File;
@@ -45,6 +40,20 @@ public class DiceFileReader {
   
   public void read(){
 	this.lines = new ArrayList();
-	// Put you read logic and populate lines
+        
+        while(this.input.hasNext()) {
+            try {
+                String fileLine = this.input.nextLine();
+                // skip comment lines that begin with #
+                if (fileLine.charAt(0) != '#') {                    
+                    this.lines.add(fileLine);
+                }
+            }
+            catch (Exception e){
+                System.out.println("Error reading next line in file");
+                System.out.println(e.getMessage());
+            }
+        }
+        input.close();                      // close file
   }
 }
