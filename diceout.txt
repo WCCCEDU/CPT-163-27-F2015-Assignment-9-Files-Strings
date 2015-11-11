@@ -1,0 +1,44 @@
+
+
+DICE SET #1: 20:loaded:6 10:numbered 6:fudge 10:fudge 20:fudge
+     Create LOADED with 20 sides. Loaded number:6
+     Create NUMBERED die with 10 sides. 
+     Create FUDGE with 6 sides. 
+ERROR:  Number of sides (10) for Fudge die not allowed. Die not rolled.
+ERROR:  Number of sides (20) for Fudge die not allowed. Die not rolled.
+Tray value for dice set #1: 8
+
+
+DICE SET #2: 4:loaded:1 10:numbered 6:fudge 100:numbered 5:numbered
+     Create LOADED with 4 sides. Loaded number:1
+     Create NUMBERED die with 10 sides. 
+     Create FUDGE with 6 sides. 
+     Create NUMBERED die with 100 sides. 
+     Create NUMBERED die with 5 sides. 
+Tray value for dice set #2: 11
+
+
+DICE SET #3: 8:fudge 8:numbered 8:loaded:4
+ERROR:  Number of sides (8) for Fudge die not allowed. Die not rolled.
+     Create NUMBERED die with 8 sides. 
+     Create LOADED with 8 sides. Loaded number:4
+Tray value for dice set #3: 9
+
+
+DICE SET #4: 10:numbered 10:numbered 10:numbered 10:numbered
+     Create NUMBERED die with 10 sides. 
+     Create NUMBERED die with 10 sides. 
+     Create NUMBERED die with 10 sides. 
+     Create NUMBERED die with 10 sides. 
+Tray value for dice set #4: 24
+
+
+DICE SET #5: 6:fudge 6:loaded:2 6:loaded:4 6:loaded:6
+     Create FUDGE with 6 sides. 
+     Create LOADED with 6 sides. Loaded number:2
+     Create LOADED with 6 sides. Loaded number:4
+     Create LOADED with 6 sides. Loaded number:6
+Tray value for dice set #5: 7
+
+
+That's all folks!
