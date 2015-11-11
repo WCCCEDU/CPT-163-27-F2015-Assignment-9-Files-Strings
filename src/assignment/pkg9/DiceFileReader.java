@@ -45,6 +45,12 @@ public class DiceFileReader {
   
   public void read(){
 	this.lines = new ArrayList();
-	// Put you read logic and populate lines
+	//Skips the comments in the input file
+        while (this.input.hasNext()){
+            String line = this.input.nextLine();
+            if (line.charAt(0) != '#') {
+                this.lines.add(line);
+            }
+        }     
   }
 }
