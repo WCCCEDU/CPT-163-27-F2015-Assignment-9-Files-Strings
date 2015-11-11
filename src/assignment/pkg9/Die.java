@@ -12,4 +12,8 @@ public interface Die {
    * @return integer value of die 
    */
   public int getValue();
+  
+  public String getType();
+  
+  public int getSides();
 }

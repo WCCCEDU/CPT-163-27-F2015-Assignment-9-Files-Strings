@@ -6,6 +6,7 @@ import java.util.Random;
 public class FudgeDie implements Die {
   private final int sides;
   private int value;
+  private final String type = "fudge";
 
   public FudgeDie(Integer sides) {
     this.sides = sides;
@@ -15,6 +16,16 @@ public class FudgeDie implements Die {
   @Override
   public int getValue() {
     return value;
+  }
+  
+  @Override
+  public String getType() {
+    return type;
+  }
+
+  @Override
+  public int getSides() {
+    return sides;
   }
   
   @Override

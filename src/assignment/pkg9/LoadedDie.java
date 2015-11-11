@@ -6,6 +6,7 @@ public class LoadedDie implements Die {
   private final int sides;
   private int value;
   private int targetValue;
+  private final String type = "loaded";
   
   public LoadedDie(int sides, int loaded) {
     this.sides = sides;
@@ -16,6 +17,20 @@ public class LoadedDie implements Die {
   @Override
   public int getValue() {
     return this.value;
+  }
+
+  @Override
+  public int getSides() {
+    return sides;
+  }
+
+  public int getTargetValue() {
+    return targetValue;
+  }
+
+  @Override
+  public String getType() {
+    return type;
   }
   
   @Override

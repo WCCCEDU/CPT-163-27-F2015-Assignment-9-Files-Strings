@@ -5,7 +5,15 @@
 package assignment.pkg9;
 
 import static assignment.pkg9.DiceReaderTest.test_reader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -57,28 +65,34 @@ public class Assignment9Strings {
       //  CREATE NEW DIE TOWER OBJECT AND ROLL DICE GROUPED BY LINE
       DiceTower tower = new DiceTower(dieList);
       tower.dropDice();
-      test_output(tower, i);
+      FileWriter diceRolledFile;
+   
+      try {
+        diceRolledFile = new FileWriter("diceRolled.txt", true);
+        PrintWriter file = new PrintWriter(diceRolledFile);
+        for(Die die : dieList) {
+          file.print(die.getType() + ":" + die.getSides() +";" +
+                die.getValue() + "\t");
+        }
+        file.println(" ");
+        diceRolledFile.close();
+      } catch (IOException ex) {
+        Logger.getLogger(Assignment9Strings.class.getName()).log(Level.SEVERE, null, ex);
+      } 
       i++;
+      //after printing row to the file, empty list for next row
       dieList.removeAll(dieList);
     } // end foreach line loop
+    
+    //test file output by opening file and printing contents to console
+    test_file("diceRolled.txt");
   } // end of main method
   
-  public static void test_output(DiceTower tower, int line){
-    System.out.print("Group " + line + ": \n\t");
-    for(Die rolledDie : tower.diceList) {
-      String type = rolledDie.getClass().toString();
-      System.out.print(rolledDie.getValue() + " ");
-      }
-      System.out.println("  ");
-  }
-    
-  // tests the dice tower class
- /* public static int test_diceTowerWithTwoD6(){
-    int trayValue = tower.getTrayValue();
-    if(trayValue >= 2 && trayValue <= 12){
-      return -1; // means the die value is inside the bounds of 2 d6
-    }else{
-      return trayValue;
+  public static void test_file(String filePath){
+    DiceFileReader testFile = new DiceFileReader(filePath);
+    testFile.read();
+    for(String diceLine: testFile.getLines()) {
+      System.out.println(diceLine);
     }
-  } */  //end of dice tower method
+  }
 }   //end of class
