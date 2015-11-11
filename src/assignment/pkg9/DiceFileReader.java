@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package assignment.pkg9;
 
 import java.io.File;
@@ -20,7 +16,7 @@ import java.util.logging.Logger;
 public class DiceFileReader {
   private String filePath;
   private Scanner input = null;
-  private List<String> lines;
+  private ArrayList<String> lines;
 
   /*
     Use this with
@@ -28,23 +24,32 @@ public class DiceFileReader {
   */
   
   public DiceFileReader(String filePath) {
-	this.filePath = filePath;
-	
-	File inputFile = new File(filePath);
-	
-	try {
-	  this.input = new Scanner(inputFile);
-	} catch (FileNotFoundException ex) {
-	  Logger.getLogger(DiceFileReader.class.getName()).log(Level.SEVERE, null, ex);
-	}
+    this.filePath = filePath;
+
+    File inputFile = new File(filePath);
+
+    try {
+      this.input = new Scanner(inputFile);
+    } catch (FileNotFoundException ex) {
+      Logger.getLogger(DiceFileReader.class.getName()).log(Level.SEVERE, null, ex);
+    }
   }
   
   public List<String> getLines(){
-	return this.lines;
+    return this.lines;
   }
   
+  /**
+   * reads line of document and assigns them to array
+  */
   public void read(){
-	this.lines = new ArrayList();
-	// Put you read logic and populate lines
-  }
-}
+    this.lines = new ArrayList();
+    // Put your read logic and populate lines 
+    
+    // while document has more chars, continue populating array list with lines
+    do {
+      String diceLine = input.nextLine();
+      this.lines.add(diceLine);
+    } while(input.hasNext());
+  } // end of read method
+} // end of class

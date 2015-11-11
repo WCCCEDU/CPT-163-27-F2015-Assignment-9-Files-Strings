@@ -15,8 +15,8 @@ package assignment.pkg9;
 // this test to pass again
 public class DiceReaderTest {
   public static void test_reader(){
-	DiceFileReader diceReader = new DiceFileReader("dice.txt");
-	diceReader.read();
-	System.out.println(diceReader.getLines().toString().equals("[]"));
+    DiceFileReader diceReader = new DiceFileReader("dice.txt");
+    diceReader.read();
+    System.out.println(diceReader.getLines().toString().equals("[]"));
   }
 }
