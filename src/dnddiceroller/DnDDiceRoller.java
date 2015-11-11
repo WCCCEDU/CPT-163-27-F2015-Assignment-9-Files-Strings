@@ -43,7 +43,7 @@ public class DnDDiceRoller {
   
   public static int test_oneD6(){
 	NumberedDie die = new NumberedDie(6);
-	die.roll();//method
+	die.rollDice();//method
 	int dieValue = die.getvalueOfDie(); 
 	if(dieValue >= 1 && dieValue <= 6){
 	  return -1; // Means the die value is outside its bounds for a d6

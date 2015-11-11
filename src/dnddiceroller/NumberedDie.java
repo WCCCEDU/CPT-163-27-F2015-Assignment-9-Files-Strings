@@ -28,15 +28,11 @@ public int getvalueOfDie(){
     return valueOfDie;
 }
 
-public int roll(){
-    Random rand1=new Random();
-    return this.valueOfDie=rand1.nextInt(this.sideOfDie)+1;
-    
-}
 
     @Override
     public int rollDice() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+           Random rand1=new Random();
+    return this.valueOfDie=rand1.nextInt(this.sideOfDie)+1;
     }
 
     @Override
