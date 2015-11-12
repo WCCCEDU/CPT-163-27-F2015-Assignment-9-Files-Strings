@@ -3,10 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package assignment.pkg9;
+package assignment.dnddiceroller;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -39,12 +41,39 @@ public class DiceFileReader {
 	}
   }
   
-  public List<String> getLines(){
-	return this.lines;
-  }
   
-  public void read(){
-	this.lines = new ArrayList();
-	// Put you read logic and populate lines
+
+    public DiceFileReader(String filePath, List<String> lines) {
+        this.filePath = filePath;
+        this.lines = lines;
+    }
+    public List<String> getLines(){
+	return this.lines;
+    }
+  
+    public void read(){
+        this.lines = new ArrayList<String>();
+        
+        try {
+            while(input.hasNextLine()) {
+                String temp = input.nextLine();
+                if(temp.charAt(0) != '#'){
+                   lines.add(temp); 
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println(e.getLocalizedMessage());
+        }
+    } 
+                
+                
   }
-}
+            
+                
+        
+            
+      
+        
+
