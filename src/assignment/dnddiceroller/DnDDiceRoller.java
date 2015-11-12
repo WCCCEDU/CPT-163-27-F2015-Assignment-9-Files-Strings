@@ -26,11 +26,12 @@ public class DnDDiceRoller {
           List<Die> dice = new ArrayList<Die>();
           
           //System.out.println("Line " + (i+1) + ": ");
-          for (StringTokenizer stringTokenizer = new StringTokenizer(DiceList.get(i)," "); stringTokenizer.hasMoreTokens();) {
-              int sides;
+          for (StringTokenizer stringTokenizer = new StringTokenizer(DiceList.get(i)
+               ," "); stringTokenizer.hasMoreTokens();) {
+              int die;
               String type;
               int loaded;
-              Die temp;
+            
               
               String token = stringTokenizer.nextToken();
               
@@ -38,37 +39,32 @@ public class DnDDiceRoller {
               
               StringTokenizer dieTokens = new StringTokenizer(token,":");
               
-              sides = Integer.parseInt(dieTokens.nextToken());
+              die = Integer.parseInt(dieTokens.nextToken());
               type = dieTokens.nextToken();
               
               if(type.equals("loaded"))
               {
                   loaded = Integer.parseInt(dieTokens.nextToken());
-                  System.out.println(sides + " " + loaded);
-                  
+                  LoadedDice loadedValue = new LoadedDice(die,loaded);
+                 
               }
               else if(type.equals("fudge"))
               {
-                  System.out.println(sides + "fudge");
+                  FudgeDice fudgeValue =  new FudgeDice(die);
               }
               if(type.equals("numbered"))
               {
-                  System.out.println(sides + "numbered");
+                  NumberedDie numberedValue = new NumberedDie(die);
+                  
               }
-                  
-                  
-              
-              //Use type to determine what type of die to make
-              //Throw die into dice
           }
+      
+          DiceTower diceTower = new DiceTower(dice);
           
          //Create dice tower using dice
           //roll dice in dice tower
           //output results
-          
       }
-      
-      
+    
   }
 }
-  
