@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.io.*;
 import java.util.Scanner;
+import java.util.StringTokenizer;
 
 /**
  *
@@ -17,7 +18,7 @@ public class DnDDiceRoller {
    * @param args the command line arguments
    */
   public static void main(String[] args) throws FileNotFoundException {
-	for(int i = 0; i< 1000; i++){
+      for(int i = 0; i< 1000; i++){
 	  int d6 = test_oneD6();
 	  if(d6 != -1){
 		System.out.println("Die Test Failed with Value: " + d6);
@@ -28,13 +29,21 @@ public class DnDDiceRoller {
 	  }
           DiceFileReader diceReader = diceReader = new DiceFileReader("./dice.txt");
 	}
+      Scanner scanner = null;
+      ArrayList<String> list = new ArrayList<String>();
         File temp = new File ("dice.txt");
         Scanner file = new Scanner (temp);
-        
-      while(file.hasNext()){
-           String s = file.nextLine().trim();
-          System.out.println(s);
-       }
+        String s = scanner.nextLine();
+   while(file.hasNext()){
+       String[] tempList=s.split(":");
+       String title = tempList[0];
+       String type = tempList[1].substring(1); 
+       list.add(title);
+       s = scanner.nextLine();
+   }
+   
+       System.out.println(s);
+               
 
 
         

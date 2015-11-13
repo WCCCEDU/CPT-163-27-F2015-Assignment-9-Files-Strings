@@ -30,10 +30,10 @@ public class DiceFileReader {
   public DiceFileReader(String filePath) {
 	this.filePath = filePath;
 	
-	File inputFile = new File(filePath);
+	File DiceFile = new File(filePath);
 	
 	try {
-	  this.input = new Scanner(inputFile);
+	  this.input = new Scanner(DiceFile);
 	} catch (FileNotFoundException ex) {
 	  Logger.getLogger(DiceFileReader.class.getName()).log(Level.SEVERE, null, ex);
 	}
