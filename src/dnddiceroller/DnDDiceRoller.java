@@ -34,12 +34,25 @@ public class DnDDiceRoller {
         File temp = new File ("dice.txt");
         Scanner file = new Scanner (temp);
         String s = scanner.nextLine();
-   while(file.hasNext()){
-       String[] tempList=s.split(":");
+  
+       String lineToRemove="#";
+       String currentLine;
+       
+
+        while(file.hasNext()){
+       s = scanner.nextLine();
+       String[] tempList=s.split(" ");
        String title = tempList[0];
        String type = tempList[1].substring(1); 
        list.add(title);
-       s = scanner.nextLine();
+   }
+   while(file.hasNext()){
+        s=scanner.nextLine();
+       String[] tempList=s.split(":");
+       String title=tempList[0];
+       String type=tempList[1].substring(1);
+       list.add(title);
+       
    }
    
        System.out.println(s);
