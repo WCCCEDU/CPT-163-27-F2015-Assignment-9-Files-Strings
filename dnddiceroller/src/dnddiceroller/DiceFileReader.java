@@ -37,10 +37,17 @@ public class DiceFileReader {
         this.lines = new ArrayList();
         
         while(this.input.hasNext()) {
-            String line = this.input.nextLine();
-            if (line.charAt(0) != '#') { // skip remarks
-                this.lines.add(line);
-                }
+            try {
+                String line = this.input.nextLine();
+                if (line.charAt(0) != '#') { // skip remarks
+                    this.lines.add(line);
+                    }
+            }
+            catch (Exception e) {
+                System.out.printf("Error reading file\n");
+                System.out.printf("%s\n", e.getMessage());
             }
         }
+        input.close();
+    }
 }

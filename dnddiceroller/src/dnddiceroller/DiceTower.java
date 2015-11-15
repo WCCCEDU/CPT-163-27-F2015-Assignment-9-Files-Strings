@@ -76,19 +76,14 @@ public class DiceTower {
             for (int j = 0; j < PANEL_COUNT; j++)
                 this.dice.get(i).roll();
            
-            /**
-             * I am using the instanceof Operator to determine the class
-             * of a an object in the dice array
-            
-     
+            /*
             int value = this.dice.get(i).getValue();
             if (this.dice.get(i) instanceof NumberedDie)
-                System.out.printf("Numbered Dice (is a Die) %d\n", value);
+                System.out.printf("Numbered: %d\n", value);
             else if (this.dice.get(i) instanceof Fudge)
-                System.out.printf("Fudge Dice (is a Die) %d\n", value);
+                System.out.printf("Fudge: %d\n", value);
             else
-                System.out.printf("Loaded Dice (is a Die) %d\n", value);
-            
+                System.out.printf("Loaded: %d\n", value);
             */
             
             this.trayValue += this.dice.get(i).getValue();
