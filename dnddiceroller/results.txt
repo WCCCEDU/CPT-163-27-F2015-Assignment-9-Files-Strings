@@ -1,0 +1,57 @@
+New Tray: 20:loaded:6 10:numbered 6:fudge 10:fudge 20:fudge
+value is 8
+
+value is 6
+
+value is 0
+
+value is -1
+
+value is 1
+
+Tray Value is 14
+
+New Tray: 4:loaded:1 10:numbered 6:fudge 100:numbered 5:numbered
+value is 1
+
+value is 1
+
+value is 0
+
+value is 29
+
+value is 2
+
+Tray Value is 33
+
+New Tray: 8:fudge 8:numbered 8:loaded:4
+value is -1
+
+value is 8
+
+value is 3
+
+Tray Value is 10
+
+New Tray: 10:numbered 10:numbered 10:numbered 10:numbered
+value is 2
+
+value is 2
+
+value is 10
+
+value is 5
+
+Tray Value is 19
+
+New Tray: 6:fudge 6:loaded:2 6:loaded:4 6:loaded:6
+value is -1
+
+value is 2
+
+value is 4
+
+value is 6
+
+Tray Value is 11
+
