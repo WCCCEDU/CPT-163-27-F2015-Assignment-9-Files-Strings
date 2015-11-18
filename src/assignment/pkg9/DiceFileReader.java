@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package assignment.pkg9;
 
 import java.io.File;
@@ -14,7 +10,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- *
+ * @author Katrina Siffrinn
  * @author Paul Scarrone
  */
 public class DiceFileReader {
@@ -22,10 +18,9 @@ public class DiceFileReader {
   private Scanner input = null;
   private List<String> lines;
 
-  /*
-    Use this with
-	DiceFileReader reader = new DiceFileReader("dice.txt")
-  */
+
+  //DiceFileReader reader = new DiceFileReader("dice.txt");
+
   
   public DiceFileReader(String filePath) {
 	this.filePath = filePath;
@@ -45,6 +40,14 @@ public class DiceFileReader {
   
   public void read(){
 	this.lines = new ArrayList();
-	// Put you read logic and populate lines
+	// read each line. must exclued comments that begin with # in text file.
+        while (this.input.hasNext()){
+            String line = this.input.nextLine();
+            if (line.charAt(0) != '#'){
+                this.lines.add(line);
+            }
+            //must always close files you are reading.
+            this.input.close();
+        }
   }
 }
