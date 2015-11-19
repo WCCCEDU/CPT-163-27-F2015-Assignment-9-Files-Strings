@@ -1,55 +1,48 @@
 package assignment.pkg9;
 
-
 import java.util.Random;
 
 /**
  *
- * @author Katrina Siffrinn
+ * @author Katrina
  */
-
-   
 public class NumberedDie implements Die{
-    
-  //fields
-    private int sides;   //of die
-    private int value;   // of roll
-    
-    /**
-     * constructor
-     * @param sides
-     *
-     */
-public NumberedDie (int sides){
-    this.sides = sides;
-    this.value = 0;
-   }
+    final private int numberOfSides;
+    private int value;
 
-public int getSides() {
-    return this.sides;
-}
+/**
+ * the constructor
+ * @param numberOfSides is the number of sides of the die.
+ */
+    public NumberedDie(int numberOfSides){
+        this.numberOfSides = numberOfSides;
+        this.value = 0; 
+    }
+    
     /**
      *
-     * @return sum of dice sides.
+     * @return number of sides.
      */
+    public int getNumberOfSides(){
+        return this.numberOfSides;
+    }
+      
+    @Override
+    public int getValue() {
+        return this.value;
+    }      
+    
+    //the roll method simulates the rolling of the die.
  
     @Override
-    public int getValue(){
-    return this.value;
+      public void roll(){
+        //create a Random object.
+        Random rand = new Random();
+        //get a random value for this die.
+        this.value = rand.nextInt(this.numberOfSides) +1;
+      }
+     
 }
-    /**
-     * simulates rolling one die
-     */
-
-    @Override
-       public void roll(){
-           Random rand = new Random();
-           this.value = 1 + rand.nextInt(this.sides);
-       }     
-   
-}
-    
-
 
     
 

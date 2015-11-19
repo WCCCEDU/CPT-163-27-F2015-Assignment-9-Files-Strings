@@ -46,8 +46,7 @@ public class DiceFileReader {
             if (line.charAt(0) != '#'){
                 this.lines.add(line);
             }
-            //must always close files you are reading.
-            this.input.close();
+            
         }
   }
 }

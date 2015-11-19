@@ -1,41 +1,38 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package assignment.pkg9;
-
+import java.util.Random;
 /**
  *
  * @author Katrina
  */
 
- 
- public class FudgeDie implements Die {
-   private final int sides; //of die
-   private final int value; // of roll
-   private final String type = "fudge";
- 
-   public FudgeDie(Integer sides) {
-     this.sides = sides;
-     this.value = 0;
-   }
- 
-   @Override
-   public int getValue() {
-     return value;
-   }
-     
-  public String getType() {
-    return type;
-  }
-
-  public int getSides() {
-    return sides;
-  }
-  
-   @Override
-   public void roll() {
+public class FudgeDie implements Die{
     
-}
- }
+    // fields
+  private final int sides;    
+  private int value;      
+   
+    //constructor
+    public FudgeDie(int sides){
+      this.sides = sides;
+      this.value = 0;
+  }
+           
+    /**
+     * accessors
+     * @return
+     */
+      @Override
+  public int getValue() {
+    return this.value;
+  }
+   
+    //roll method 
+  @Override
+  public void roll() {
+    Random rand = new Random();
+    this.value = rand.nextInt(3) - 1;
+  } 
+
+} 
+ 
+

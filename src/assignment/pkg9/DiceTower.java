@@ -21,7 +21,7 @@ public class DiceTower {
        
   //fields
   private final int PANEL_COUNT = 3;
-  private final List<Die> dice;
+  private List<Die> dice;
   private int trayValue;
 
  
@@ -30,42 +30,40 @@ public class DiceTower {
         this.dice = new ArrayList();
         this.trayValue = 0;
    }
-  
-    /**
-     * 
-     * @param dice 
-     */
-    public DiceTower(List dice) {
+    public DiceTower(List dice){
         this.dice = dice;
         this.trayValue = 0;
-  }
+    }
     
-  /**
-   * accessors return values to fields.
-   * @return the value of trayValue.
-   */
+    /**
+     *
+     * @return trayValue: sum of dice in tray.
+     */
     public int getTrayValue(){
-      return this.trayValue;
-  }
-  
+    return this.trayValue;
+    }
+    
+    public void addDice(Die die){
+        this.dice.add(die);
+    }
+        
   //dropDice method simulates die being dropped into a dice tower.
   public void dropDice(){
-      int i = 0;
+      for(int i = 0; i < this.PANEL_COUNT; i++){
       this.dice.stream().forEach((die) -> {
           die.roll();
       });
-  }
+      }      
   
-  
-public void trayResults(){
-    this.dice.stream().map((die) -> {
-        this.trayValue += die.getValue();
-        return die;
-      }).forEach((_item) -> {
-          trayResults();
-      });
+ this.dice.stream().forEach((die) -> {
+  this.trayValue += die.getValue();  
+    
+});
 }
 }
+      
+
+
 
  
 
