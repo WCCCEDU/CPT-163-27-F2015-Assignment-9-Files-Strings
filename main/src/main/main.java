@@ -6,10 +6,6 @@
 package main;
 
 import assignment.pkg9.DiceFileReader;
-import dice.DiceTower;
-import dice.Die;
-import dice.NumberedDie;
-import java.util.List;
 
 /**
  *
@@ -21,21 +17,10 @@ public class main {
    * @param args the command line arguments
    */
   public static void main(String[] args) {
-    DiceFileReader reader = new DiceFileReader("./dice.txt");
-	reader.read();
-	for(String line : reader.getLines()){
-	  DiceTower dt = new DiceTower();
-	  for(String dieDef : line.split(" ")){
-		String[] die = dieDef.split(":");
-		dt.addDice(new NumberedDie(Integer.parseInt(die[0])));
-	  }
-	  dt.dropDice();
-	  System.out.println(dt.getTrayValue());
-	}
-	/*dt.addDice(new NumberedDie(6));
-	dt.addDice(new NumberedDie(8));
-	dt.addDice(new NumberedDie(10));
-	dt.addDice(new NumberedDie(2));
-	dt.addDice(new NumberedDie(20));*/
+    DiceFileReader diceReader = new DiceFileReader("./dice.txt");
+    diceReader.read();
+    
+    assignment.pkg9.DiceReaderTest.test_reader();
+
   }
 }
