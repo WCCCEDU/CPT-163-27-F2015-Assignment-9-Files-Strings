@@ -1,0 +1,36 @@
+Tray #1:
+Loaded die roll: 6
+Numbered die roll: 7
+Fudge die roll: -1
+Fudge die roll: 0
+Fudge die roll: 1
+Total this tray: 13
+
+Tray #2:
+Loaded die roll: 1
+Numbered die roll: 5
+Fudge die roll: 0
+Numbered die roll: 41
+Numbered die roll: 3
+Total this tray: 50
+
+Tray #3:
+Fudge die roll: -1
+Numbered die roll: 2
+Loaded die roll: 4
+Total this tray: 5
+
+Tray #4:
+Numbered die roll: 6
+Numbered die roll: 5
+Numbered die roll: 3
+Numbered die roll: 8
+Total this tray: 22
+
+Tray #5:
+Fudge die roll: 0
+Loaded die roll: 2
+Loaded die roll: 4
+Loaded die roll: 6
+Total this tray: 12
+
