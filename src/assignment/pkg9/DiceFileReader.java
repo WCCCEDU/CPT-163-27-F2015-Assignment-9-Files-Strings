@@ -50,7 +50,10 @@ public class DiceFileReader {
             this.input.nextLine();
             
         while (this.input.hasNext()){
-            this.lines.add(this.input.nextLine());
+           String currentLine= this.input.nextLine();
+           if(!currentLine.contains("####")){
+             this.lines.add(currentLine);              
+           }
             
         }   
         this.input.close();
