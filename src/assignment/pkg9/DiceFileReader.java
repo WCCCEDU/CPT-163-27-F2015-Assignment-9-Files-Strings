@@ -30,10 +30,10 @@ public class DiceFileReader {
   public DiceFileReader(String filePath) {
 	this.filePath = filePath;
 	
-	File inputFile = new File(filePath);
+	File DiceFile = new File(filePath);
 	
 	try {
-	  this.input = new Scanner(inputFile);
+	  this.input = new Scanner(DiceFile);
 	} catch (FileNotFoundException ex) {
 	  Logger.getLogger(DiceFileReader.class.getName()).log(Level.SEVERE, null, ex);
 	}
@@ -46,5 +46,18 @@ public class DiceFileReader {
   public void read(){
 	this.lines = new ArrayList();
 	// Put you read logic and populate lines
+        for(int i=0; i<1; i++){
+            this.input.nextLine();
+            
+        while (this.input.hasNext()){
+           String currentLine= this.input.nextLine();
+           if(!currentLine.contains("####")){
+             this.lines.add(currentLine);              
+           }
+            
+        }   
+        this.input.close();
+        }
+        
   }
 }
