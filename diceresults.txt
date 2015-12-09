@@ -1,0 +1,31 @@
+
+Dice Set #1: 20:loaded:6 10:numbered 6:fudge 10:fudge 20:fudge
+Loaded Die Result: 6
+Numbered Die Result: 7
+Fudge Die Result: 6
+Fudge Die Result: 4
+Fudge Die Result: 13
+
+Dice Set #2: 4:loaded:1 10:numbered 6:fudge 100:numbered 5:numbered
+Loaded Die Result: 2
+Numbered Die Result: 3
+Fudge Die Result: 5
+Numbered Die Result: 71
+Numbered Die Result: 2
+
+Dice Set #3: 8:fudge 8:numbered 8:loaded:4
+Fudge Die Result: 8
+Numbered Die Result: 6
+Loaded Die Result: 7
+
+Dice Set #4: 10:numbered 10:numbered 10:numbered 10:numbered
+Numbered Die Result: 2
+Numbered Die Result: 8
+Numbered Die Result: 3
+Numbered Die Result: 1
+
+Dice Set #5: 6:fudge 6:loaded:2 6:loaded:4 6:loaded:6
+Fudge Die Result: 4
+Loaded Die Result: 2
+Loaded Die Result: 4
+Loaded Die Result: 6
