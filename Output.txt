@@ -1,0 +1,26 @@
+Loaded:18
+Numbered:4
+Fudged:-1
+Fudged:0
+Fudged:-1
+----------END OF SET------------
+Loaded:1
+Numbered:6
+Fudged:1
+Numbered:15
+Numbered:5
+----------END OF SET------------
+Fudged:0
+Numbered:6
+Loaded:8
+----------END OF SET------------
+Numbered:2
+Numbered:2
+Numbered:5
+Numbered:2
+----------END OF SET------------
+Fudged:1
+Loaded:6
+Loaded:4
+Loaded:2
+----------END OF SET------------

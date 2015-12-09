@@ -20,7 +20,7 @@ import java.util.logging.Logger;
 public class DiceFileReader {
   private String filePath;
   private Scanner input = null;
-  private List<String> lines;
+  private ArrayList<String> lines;
 
   /*
     Use this with
@@ -39,12 +39,17 @@ public class DiceFileReader {
 	}
   }
   
-  public List<String> getLines(){
+  public ArrayList<String> getLines(){
 	return this.lines;
   }
   
   public void read(){
 	this.lines = new ArrayList();
 	// Put you read logic and populate lines
+        while(this.input.hasNext())
+        {
+            String line = this.input.nextLine();
+            this.lines.add(line);
+        }
   }
 }
