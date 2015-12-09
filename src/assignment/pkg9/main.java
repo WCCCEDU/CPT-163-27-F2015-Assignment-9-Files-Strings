@@ -66,5 +66,6 @@ public class main {
        }
      } 
    }
+   outputFile.close();
   }
 }
