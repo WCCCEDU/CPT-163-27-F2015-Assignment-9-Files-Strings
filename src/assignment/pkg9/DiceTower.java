@@ -47,18 +47,17 @@ public class DiceTower {
         this.dice.add(die);
     }
         
-  //dropDice method simulates die being dropped into a dice tower.
-  public void dropDice(){
+    //dropDice method simulates die being dropped into a dice tower.
+    public void dropDice(){
       for(int i = 0; i < this.PANEL_COUNT; i++){
-      this.dice.stream().forEach((die) -> {
+        this.dice.stream().forEach((die) -> {
           die.roll();
       });
       }      
   
- this.dice.stream().forEach((die) -> {
-  this.trayValue += die.getValue();  
-    
-});
+    this.dice.stream().forEach((die) -> {
+        this.trayValue += die.getValue();   
+        });
 }
 }
       
