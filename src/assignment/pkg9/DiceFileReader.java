@@ -5,8 +5,11 @@
  */
 package assignment.pkg9;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -43,8 +46,25 @@ public class DiceFileReader {
 	return this.lines;
   }
   
-  public void read(){
-	this.lines = new ArrayList();
+  public void read() throws IOException{
+    this.lines = new ArrayList();
+    FileReader fileReader = null;
+    BufferedReader bufferedReader = null;
+    String line = null;
+    
+    try {
+        fileReader = new FileReader("dice.txt");
+        bufferedReader = new BufferedReader(fileReader);
+    } catch (FileNotFoundException ex) {
+        Logger.getLogger(DiceFileReader.class.getName()).log(Level.SEVERE, null, ex);
+    }
+    
+    while((line = bufferedReader.readLine()) != null){
+        if(!line.startsWith("#### ")){
+            String currentLine = line;
+            this.lines.add(currentLine);
+        }
+    }
 	// Put you read logic and populate lines
   }
 }
